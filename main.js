@@ -182,3 +182,41 @@ console.log(sumOfCubes([1, 5, 9])); // ➞ 855
 console.log(sumOfCubes([3, 4, 5])); // ➞ 216
 console.log(sumOfCubes([2])); // ➞ 8
 console.log(sumOfCubes([])); // ➞ 0
+
+/* --------------- 11 --------------- */
+//Filter out Strings from an Array
+
+function filterArray(array) {
+  for (let i = 0; i < array.length; i++) {
+    if (typeof array[i] === "string") {
+      array.splice(i, 1);
+      i--;
+    }
+  }
+  return array;
+}
+
+console.log(filterArray([1, 2, "a", "b"])); // ➞ [1, 2]
+
+console.log(filterArray([1, "a", "b", 0, 15])); // ➞ [1, 0, 15]
+
+console.log(filterArray([1, 2, "aasf", "1", "123", 123])); // ➞ [1, 2, 123]
+
+/* --------------- 12 --------------- */
+//Array of Multiples
+
+function arrayOfMultiples(multiple, quantity) {
+  let resultArray = [];
+  for (let i = 0; i < quantity; i++) {
+    resultArray.push(multiple * (i + 1));
+  }
+  return resultArray
+}
+
+console.log(arrayOfMultiples(7, 5)); // ➞ [7, 14, 21, 28, 35]
+
+console.log(arrayOfMultiples(12, 10)); // ➞ [12, 24, 36, 48, 60, 72, 84, 96, 108, 120]
+
+console.log(arrayOfMultiples(17, 6)); // ➞ [17, 34, 51, 68, 85, 102]
+
+/* --------------- 13 --------------- */
